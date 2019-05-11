@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Mod id="269337bd-75d8-409e-a055-7b70b6d4242e" version="1">
+  <Properties>
+    <Name>[COLOR_GoldMetalDark]Concise Mod Manager[ENDCOLOR]</Name>
+    <Teaser>Make your mods more organized.</Teaser>
+    <Description>This mod implements a "folder system" to help you manage your mods in a more organized way.</Description>
+    <Authors>eudaimonia</Authors>
+    <SpecialThanks>ubereffect</SpecialThanks>
+    <AffectsSavedGames>0</AffectsSavedGames>
+    <CompatibleVersions>1.2,2.0</CompatibleVersions>
+  </Properties>
+
+  <InGameActions>
+    <ImportFiles>
+      <File>CustomFolder.lua</File>
+    </ImportFiles>
+  </InGameActions>
+  
+  <FrontEndActions>
+    <UpdateText>
+      <File>Text/Localisation.sql</File>
+    </UpdateText>
+    <ImportFiles>
+      <File>CustomFolder.lua</File>
+      <File>UI/Mods.lua</File>
+      <File>UI/Mods.xml</File>
+      <File>Texture/folder_closed.dds</File>
+      <File>Texture/folder_opened.dds</File>
+      <File>Texture/gear.dds</File>
+      <File>Texture/organize_author.dds</File>
+      <File>Texture/organize_date.dds</File>
+      <File>Texture/organize_enabled.dds</File>
+      <File>Texture/organize_custom.dds</File>
+      <File>Texture/tutorial.dds</File>
+      <File>Texture/generate.dds</File>
+    </ImportFiles>
+  </FrontEndActions>
+
+  <Files>
+    <File>Text/Localisation.sql</File>
+    <File>CustomFolder.lua</File>
+    <File>UI/Mods.lua</File>
+    <File>UI/Mods.xml</File>
+    <File>Texture/folder_closed.dds</File>
+    <File>Texture/folder_opened.dds</File>
+    <File>Texture/gear.dds</File>
+    <File>Texture/organize_author.dds</File>
+    <File>Texture/organize_date.dds</File>
+    <File>Texture/organize_enabled.dds</File>
+    <File>Texture/organize_custom.dds</File>
+    <File>Texture/tutorial.dds</File>
+    <File>Texture/generate.dds</File>
+  </Files>
+</Mod>

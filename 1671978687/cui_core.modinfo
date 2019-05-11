@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Mod id="5f504949-398a-4038-a838-43c3acc4dc10" version="1">
+  <Properties>
+    <Name>[COLOR_Civ6LightBlue]Concise UI[ENDCOLOR] - [COLOR_Civ6Red][ Core ][ENDCOLOR]</Name>
+    <Teaser>For a better gaming experience.</Teaser>
+    <Description>Concise UI is a set of modular UI mods, it greatly improves the game experience by modifying the vanilla UI and adding new UI elements to the game.</Description>
+    <Authors>eudaimonia</Authors>
+    <SpecialThanks>Plerion</SpecialThanks>
+    <AffectsSavedGames>0</AffectsSavedGames>
+    <CompatibleVersions>2.0</CompatibleVersions>
+  </Properties>
+
+  <FrontEndActions>
+    <UpdateText id="Cui_Config_Text">
+      <File>Config/Cui_Config.sql</File>
+    </UpdateText>
+  </FrontEndActions>
+
+  <InGameActions>
+    <UpdateText id="Cui_Text">
+      <File>Text/Cui_en_US.sql</File>
+      <File>Text/Cui_es_ES.sql</File>
+      <File>Text/Cui_fr_FR.sql</File>
+      <File>Text/Cui_it_IT.sql</File>
+      <File>Text/Cui_ja_JP.sql</File>
+      <File>Text/Cui_zh_CN.sql</File>
+      <File>Text/LanguageTemplate.sql</File>
+    </UpdateText>
+    <ImportFiles id="Cui_Core">
+      <File>Core/CuiHelper.lua</File>
+      <File>Core/CuiSettings.lua</File>
+      <File>Log/GameInfo/CuiGameInfo.lua</File>
+      <File>Log/CuiLog.lua</File>
+      <File>Log/CuiLog.xml</File>
+    </ImportFiles>
+    <AddUserInterfaces id="Cui_Dummy">
+      <Properties><Context>InGame</Context></Properties>
+      <File>Log/CuiLog.xml</File>
+    </AddUserInterfaces>
+  </InGameActions>
+
+  <Files>
+    <!-- Config -->
+    <File>Config/Cui_Config.sql</File>
+    <!-- Text -->
+    <File>Text/Cui_en_US.sql</File>
+    <File>Text/Cui_es_ES.sql</File>
+    <File>Text/Cui_fr_FR.sql</File>
+    <File>Text/Cui_it_IT.sql</File>
+    <File>Text/Cui_ja_JP.sql</File>
+    <File>Text/Cui_zh_CN.sql</File>
+    <File>Text/LanguageTemplate.sql</File>
+    <!-- Cui Core -->
+    <File>Core/CuiHelper.lua</File>
+    <File>Core/CuiSettings.lua</File>
+    <!-- Cui Log -->
+    <File>Log/GameInfo/CuiGameInfo.lua</File>
+    <File>Log/CuiLog.lua</File>
+    <File>Log/CuiLog.xml</File>
+  </Files>
+</Mod>

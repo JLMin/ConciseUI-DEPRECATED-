@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Mod id="aeb02dd6-9c82-4058-af41-256a2b01ff47" version="1">
+  <Properties>
+    <Name>[COLOR_Civ6LightBlue]Concise UI[ENDCOLOR] - [COLOR_Civ6Yellow]Screenshot[ENDCOLOR]</Name>
+    <Teaser>[Concise UI Add-On]</Teaser>
+    <Description>[ICON_Bullet]Toggles the UI off to allow for better screenshots.</Description>
+    <Authors>eudaimonia</Authors>
+    <AffectsSavedGames>0</AffectsSavedGames>
+    <CompatibleVersions>2.0</CompatibleVersions>
+  </Properties>
+
+  <Dependencies>
+    <Mod id="5f504949-398a-4038-a838-43c3acc4dc10" title="[COLOR_Civ6LightBlue]Concise UI[ENDCOLOR] - [COLOR_Civ6Red][ Core ][ENDCOLOR]" />
+  </Dependencies>
+
+  <InGameActions>
+    <AddUserInterfaces id="Cui_InGameUI">
+      <Properties>
+        <Context>InGame</Context>
+      </Properties>
+      <File>UI/Additions/Cui_Screenshot.xml</File>
+    </AddUserInterfaces>
+    <ImportFiles id="Cui_Additions_Files">
+      <File>UI/Additions/Cui_Screenshot.lua</File>
+      <File>UI/Additions/Cui_Screenshot.xml</File>
+    </ImportFiles>
+
+    <ImportFiles id="Cui_Texture">
+      <File>UI/Additions/Screenshot_Icon.dds</File>
+    </ImportFiles>
+  </InGameActions>
+
+  <Files>
+    <!-- UI - Additions -->
+    <File>UI/Additions/Screenshot_Icon.dds</File>
+    <File>UI/Additions/Cui_Screenshot.lua</File>
+    <File>UI/Additions/Cui_Screenshot.xml</File>
+  </Files>
+</Mod>

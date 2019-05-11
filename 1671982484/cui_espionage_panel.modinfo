@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Mod id="60725d5b-c38e-4333-9e05-5821d432d3f9" version="1">
+  <Properties>
+    <Name>[COLOR_Civ6LightBlue]Concise UI[ENDCOLOR] - [COLOR_Civ6Yellow]Espionage Panel[ENDCOLOR]</Name>
+    <Teaser>[Concise UI Add-On]</Teaser>
+    <Description>[ICON_Bullet]Added a filter.[NEWLINE][ICON_Bullet]When choosing a city the panel now stays open, with possible missions showing as an additional panel.</Description>
+    <Authors>eudaimonia</Authors>
+    <AffectsSavedGames>0</AffectsSavedGames>
+    <CompatibleVersions>2.0</CompatibleVersions>
+  </Properties>
+  
+  <Dependencies>
+    <Mod id="5f504949-398a-4038-a838-43c3acc4dc10" title="[COLOR_Civ6LightBlue]Concise UI[ENDCOLOR] - [COLOR_Civ6Red][ Core ][ENDCOLOR]" />
+  </Dependencies>
+
+  <ActionCriteria>
+    <Criteria id="Expansion1AndBeyond" any="1">
+      <RuleSetInUse>RULESET_EXPANSION_1,RULESET_EXPANSION_2</RuleSetInUse>
+    </Criteria>
+    <Criteria id="Expansion2AndBeyond" any="1">
+      <RuleSetInUse>RULESET_EXPANSION_2</RuleSetInUse>
+    </Criteria>
+  </ActionCriteria>
+
+  <FrontEndActions>
+    <UpdateDatabase id="Cui_Config">
+      <File>Config/Cui_Config.xml</File>
+    </UpdateDatabase>
+    <UpdateText id="Cui_Config_Text">
+      <File>Config/Cui_Config.sql</File>
+    </UpdateText>
+  </FrontEndActions>
+
+  <InGameActions>
+    <ImportFiles id="Cui_Base_Files">
+      <Properties>
+        <LoadOrder>10</LoadOrder>
+      </Properties>
+      <File>UI/Base/EspionageChooser.lua</File>
+      <File>UI/Base/EspionageChooser.xml</File>
+      <File>UI/Base/EspionageSupport.lua</File>
+    </ImportFiles>
+    <ImportFiles id="Cui_Expansion1_Files" criteria="Expansion1AndBeyond">
+      <Properties>
+        <LoadOrder>11</LoadOrder>
+      </Properties>
+      <File>UI/Expansion1/EspionageChooser_Expansion1.lua</File>
+    </ImportFiles>
+    <ImportFiles id="Cui_Expansion2_Files" criteria="Expansion2AndBeyond">
+      <Properties>
+        <LoadOrder>12</LoadOrder>
+      </Properties>
+      <File>UI/Expansion2/EspionageChooser.xml</File>
+      <File>UI/Expansion2/EspionageChooser_Expansion1.lua</File>
+    </ImportFiles>
+  </InGameActions>
+
+  <Files>
+    <!-- UI - Base -->
+    <File>UI/Base/EspionageChooser.lua</File>
+    <File>UI/Base/EspionageChooser.xml</File>
+    <File>UI/Base/EspionageSupport.lua</File>
+    <!-- UI - Expansion1 -->
+    <File>UI/Expansion1/EspionageChooser_Expansion1.lua</File>
+    <!-- UI - Expansion2 -->
+    <File>UI/Expansion2/EspionageChooser.xml</File>
+    <File>UI/Expansion2/EspionageChooser_Expansion1.lua</File>
+  </Files>
+</Mod>

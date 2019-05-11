@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Mod id="01bd0d87-038a-458d-9ded-39bfbc47c09e" version="1">
+  <Properties>
+    <Name>[COLOR_Civ6LightBlue]Concise UI[ENDCOLOR] - [COLOR_Civ6Yellow]Climate Screen[ENDCOLOR]</Name>
+    <Teaser>[Concise UI Add-On]</Teaser>
+    <Description>[ICON_Bullet]Added nations colors in Climate Screen for CO2 emissions.</Description>
+    <Authors>eudaimonia</Authors>
+    <AffectsSavedGames>0</AffectsSavedGames>
+    <CompatibleVersions>2.0</CompatibleVersions>
+  </Properties>
+  
+  <Dependencies>
+    <Mod id="5f504949-398a-4038-a838-43c3acc4dc10" title="[COLOR_Civ6LightBlue]Concise UI[ENDCOLOR] - [COLOR_Civ6Red][ Core ][ENDCOLOR]" />
+  </Dependencies>
+
+  <ActionCriteria>
+    <Criteria id="Expansion2AndBeyond" any="1">
+      <RuleSetInUse>RULESET_EXPANSION_2</RuleSetInUse>
+    </Criteria>
+  </ActionCriteria>
+  
+  <InGameActions>
+    <ImportFiles id="Cui_Expansion2_Files" criteria="Expansion2AndBeyond">
+      <Properties>
+        <LoadOrder>12</LoadOrder>
+      </Properties>
+      <File>UI/Expansion2/ClimateScreen.lua</File>
+      <File>UI/Expansion2/ClimateScreen.xml</File>
+    </ImportFiles>
+  </InGameActions>
+
+  <Files>
+    <!-- UI - Expansion2 -->
+    <File>UI/Expansion2/ClimateScreen.lua</File>
+    <File>UI/Expansion2/ClimateScreen.xml</File>
+  </Files>
+</Mod>

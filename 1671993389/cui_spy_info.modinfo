@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Mod id="17034735-068b-42dc-bb8a-2708a93530db" version="1">
+  <Properties>
+    <Name>[COLOR_Civ6LightBlue]Concise UI[ENDCOLOR] - [COLOR_Civ6Yellow]Spy Info[ENDCOLOR]</Name>
+    <Teaser>[Concise UI Add-On]</Teaser>
+    <Description>[ICON_Bullet]Added Spies information on top bar.</Description>
+    <Authors>eudaimonia</Authors>
+    <AffectsSavedGames>0</AffectsSavedGames>
+    <CompatibleVersions>2.0</CompatibleVersions>
+  </Properties>
+  
+  <Dependencies>
+    <Mod id="5f504949-398a-4038-a838-43c3acc4dc10" title="[COLOR_Civ6LightBlue]Concise UI[ENDCOLOR] - [COLOR_Civ6Red][ Core ][ENDCOLOR]" />
+  </Dependencies>
+
+  <InGameActions>
+    <AddUserInterfaces id="Cui_InGameUI">
+      <Properties>
+        <Context>InGame</Context>
+      </Properties>
+      <File>UI/Additions/Cui_SpyInfo.xml</File>
+    </AddUserInterfaces>
+    <ImportFiles id="Cui_Additions_Files">
+      <File>UI/Additions/Cui_SpyInfo.lua</File>
+      <File>UI/Additions/Cui_SpyInfo.xml</File>
+    </ImportFiles>
+  </InGameActions>
+
+  <Files>
+    <!-- UI - Additions -->
+    <File>UI/Additions/Cui_SpyInfo.lua</File>
+    <File>UI/Additions/Cui_SpyInfo.xml</File>
+  </Files>
+</Mod>

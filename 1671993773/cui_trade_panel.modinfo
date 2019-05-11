@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Mod id="9558362b-58c0-4b4b-a0ef-ebaf86b36834" version="1">
+  <Properties>
+    <Name>[COLOR_Civ6LightBlue]Concise UI[ENDCOLOR] - [COLOR_Civ6Yellow]Trade Panel[ENDCOLOR]</Name>
+    <Teaser>[Concise UI Add-On]</Teaser>
+    <Description>[ICON_Bullet]UI reworked; sortable by yields.[NEWLINE][ICON_Bullet]"Choose City" panel now shows city yields.[NEWLINE][ICON_Bullet]Panel now shows the correct number of turns to complete, not distance.
+</Description>
+    <Authors>eudaimonia</Authors>
+    <AffectsSavedGames>0</AffectsSavedGames>
+    <CompatibleVersions>2.0</CompatibleVersions>
+  </Properties>
+  
+  <Dependencies>
+    <Mod id="5f504949-398a-4038-a838-43c3acc4dc10" title="[COLOR_Civ6LightBlue]Concise UI[ENDCOLOR] - [COLOR_Civ6Red][ Core ][ENDCOLOR]" />
+  </Dependencies>
+
+  <InGameActions>
+    <ImportFiles id="Cui_Support">
+      <Properties>
+        <LoadOrder>9</LoadOrder>
+      </Properties>
+      <File>Support/CuiTradeRouteSupport.lua</File>
+    </ImportFiles>
+    <ImportFiles id="Cui_Base_Files">
+      <Properties>
+        <LoadOrder>10</LoadOrder>
+      </Properties>
+      <File>UI/Base/TradeOriginChooser.lua</File>
+      <File>UI/Base/TradeOriginChooser.xml</File>
+      <File>UI/Base/TradeOverview.lua</File>
+      <File>UI/Base/TradeRouteChooser.lua</File>
+      <File>UI/Base/TradeRouteChooser.xml</File>
+    </ImportFiles>
+  </InGameActions>
+
+  <Files>
+    <!-- Support -->
+    <File>Support/CuiTradeRouteSupport.lua</File>
+    <!-- UI - Base -->
+    <File>UI/Base/TradeOriginChooser.lua</File>
+    <File>UI/Base/TradeOriginChooser.xml</File>
+    <File>UI/Base/TradeOverview.lua</File>
+    <File>UI/Base/TradeRouteChooser.lua</File>
+    <File>UI/Base/TradeRouteChooser.xml</File>
+  </Files>
+</Mod>

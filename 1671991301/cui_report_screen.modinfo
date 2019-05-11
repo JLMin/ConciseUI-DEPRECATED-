@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Mod id="bef43a06-5382-4e8d-87a7-d89e045d8bee" version="1">
+  <Properties>
+    <Name>[COLOR_Civ6LightBlue]Concise UI[ENDCOLOR] - [COLOR_Civ6Yellow]Report Screen[ENDCOLOR]</Name>
+    <Teaser>[Concise UI Add-On]</Teaser>
+    <Description>[ICON_Bullet]UI reworked.[NEWLINE][ICON_Bullet]Added a deal report (based on BRS).[NEWLINE][ICON_Bullet]Click to move to a particular city.</Description>
+    <Authors>eudaimonia</Authors>
+    <AffectsSavedGames>0</AffectsSavedGames>
+    <CompatibleVersions>2.0</CompatibleVersions>
+  </Properties>
+  
+  <Dependencies>
+    <Mod id="5f504949-398a-4038-a838-43c3acc4dc10" title="[COLOR_Civ6LightBlue]Concise UI[ENDCOLOR] - [COLOR_Civ6Red][ Core ][ENDCOLOR]" />
+  </Dependencies>
+
+  <ActionCriteria>
+    <Criteria id="Expansion1AndBeyond" any="1">
+      <RuleSetInUse>RULESET_EXPANSION_1,RULESET_EXPANSION_2</RuleSetInUse>
+    </Criteria>
+    <Criteria id="Expansion2AndBeyond" any="1">
+      <RuleSetInUse>RULESET_EXPANSION_2</RuleSetInUse>
+    </Criteria>
+  </ActionCriteria>
+
+  <InGameActions>
+    <ImportFiles id="Cui_Base_Files">
+      <Properties>
+        <LoadOrder>10</LoadOrder>
+      </Properties>
+      <File>UI/Base/ReportScreen.lua</File>
+      <File>UI/Base/ReportScreen.xml</File>
+      <File>UI/Base/ReportsList.lua</File>
+    </ImportFiles>
+    <ImportFiles id="Cui_Expansion1_Files" criteria="Expansion1AndBeyond">
+      <Properties>
+        <LoadOrder>11</LoadOrder>
+      </Properties>
+      <File>UI/Expansion1/ReportScreen.xml</File>
+      <File>UI/Expansion1/ReportScreen_Expansion1.lua</File>
+    </ImportFiles>
+    <ImportFiles id="Cui_Expansion2_Files" criteria="Expansion2AndBeyond">
+      <Properties>
+        <LoadOrder>12</LoadOrder>
+      </Properties>
+      <File>UI/Expansion2/ReportScreen.xml</File>
+      <File>UI/Expansion2/ReportScreen_Expansion2.lua</File>
+    </ImportFiles>
+  </InGameActions>
+
+  <Files>
+    <!-- UI - Base -->
+    <File>UI/Base/ReportScreen.lua</File>
+    <File>UI/Base/ReportScreen.xml</File>
+    <File>UI/Base/ReportsList.lua</File>
+    <!-- UI - Expansion1 -->
+    <File>UI/Expansion1/ReportScreen.xml</File>
+    <File>UI/Expansion1/ReportScreen_Expansion1.lua</File>
+    <!-- UI - Expansion2 -->
+    <File>UI/Expansion2/ReportScreen.xml</File>
+    <File>UI/Expansion2/ReportScreen_Expansion2.lua</File>
+  </Files>
+</Mod>

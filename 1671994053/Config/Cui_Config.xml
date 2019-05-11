@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- CUI Unit List Hotkeys -->
+<!-- eudaimonia, 2/3/2019 -->
+<GameInfo>
+  <InputCategories>
+    <InsertOrIgnore CategoryId="CONCISEUI" Name="LOC_CUI_CONFIG_CATEGORY" Visible="1" SortIndex="0" />
+  </InputCategories>
+  
+  <InputActions>	
+    <InsertOrIgnore ActionId="CuiActionToggleUnitList"    Name="LOC_CUI_CONFIG_OPEN_UNIT_LIST"      Description="LOC_CUI_CONFIG_OPEN_UNIT_LIST"      CategoryId="CONCISEUI" ContextId="World" />
+  </InputActions>
+  
+  <InputActionDefaultGestures>
+    <InsertOrIgnore ActionId="CuiActionToggleUnitList"    Index="0" GestureType="KBMouse" GestureData="LOC_OPTIONS_KEY_L"/>
+  </InputActionDefaultGestures>
+</GameInfo>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Mod id="68e01474-9e1d-4bb1-ade9-bbb5c1758b64" version="1">
+  <Properties>
+    <Name>[COLOR_Civ6LightBlue]Concise UI[ENDCOLOR] - [COLOR_Civ6Yellow]Production Panel[ENDCOLOR]</Name>
+    <Teaser>[Concise UI Add-On]</Teaser>
+    <Description>[ICON_Bullet]Panel compressed.[NEWLINE][ICON_Bullet]Added an option to Use queue by default.[NEWLINE][ICON_Bullet]Fixed an issue with vanilla game allowing for multiple queueing of the same unique item.</Description>
+    <Authors>eudaimonia</Authors>
+    <AffectsSavedGames>0</AffectsSavedGames>
+    <CompatibleVersions>2.0</CompatibleVersions>
+  </Properties>
+  
+  <Dependencies>
+    <Mod id="5f504949-398a-4038-a838-43c3acc4dc10" title="[COLOR_Civ6LightBlue]Concise UI[ENDCOLOR] - [COLOR_Civ6Red][ Core ][ENDCOLOR]" />
+  </Dependencies>
+  
+  <InGameActions>
+    <ImportFiles id="Cui_Support">
+      <Properties>
+        <LoadOrder>9</LoadOrder>
+      </Properties>
+      <File>Support/CuiProductionData.lua</File>
+      <File>Support/CuiProductionSupport.lua</File>
+      <File>Support/CuiProductionUI.lua</File>
+    </ImportFiles>
+    <ImportFiles id="Cui_Base_Files">
+      <Properties>
+        <LoadOrder>10</LoadOrder>
+      </Properties>
+      <File>UI/Base/ProductionPanel.lua</File>
+      <File>UI/Base/ProductionPanel.xml</File>
+      <File>Texture/branch.dds</File>
+      <File>Texture/wrench.dds</File>
+    </ImportFiles>
+  </InGameActions>
+
+  <Files>
+    <!-- Support -->
+    <File>Support/CuiProductionData.lua</File>
+    <File>Support/CuiProductionSupport.lua</File>
+    <File>Support/CuiProductionUI.lua</File>
+    <!-- UI - Base -->
+    <File>UI/Base/ProductionPanel.lua</File>
+    <File>UI/Base/ProductionPanel.xml</File>
+    <File>Texture/branch.dds</File>
+    <File>Texture/wrench.dds</File>
+  </Files>
+</Mod>

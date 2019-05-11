@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Mod id="b11f026c-ef0d-49c2-91bb-dab7376afd4c" version="1">
+  <Properties>
+    <Name>[COLOR_Civ6LightBlue]Concise UI[ENDCOLOR] - [COLOR_Civ6Yellow]Launch Bar[ENDCOLOR]</Name>
+    <Teaser>[Concise UI Add-On]</Teaser>
+    <Description>[ICON_Bullet]Launch bar icons now blink when a new action is available.[NEWLINE][ICON_Bullet]Added tooltip and turns remaining for tech and civic when world track is minimized.</Description>
+    <Authors>eudaimonia</Authors>
+    <AffectsSavedGames>0</AffectsSavedGames>
+    <CompatibleVersions>2.0</CompatibleVersions>
+  </Properties>
+  
+  <Dependencies>
+    <Mod id="5f504949-398a-4038-a838-43c3acc4dc10" title="[COLOR_Civ6LightBlue]Concise UI[ENDCOLOR] - [COLOR_Civ6Red][ Core ][ENDCOLOR]" />
+  </Dependencies>
+
+  <ActionCriteria>
+    <Criteria id="Expansion1AndBeyond" any="1">
+      <RuleSetInUse>RULESET_EXPANSION_1,RULESET_EXPANSION_2</RuleSetInUse>
+    </Criteria>
+    <Criteria id="Expansion2AndBeyond" any="1">
+      <RuleSetInUse>RULESET_EXPANSION_2</RuleSetInUse>
+    </Criteria>
+  </ActionCriteria>
+
+  <InGameActions>
+    <ImportFiles id="Cui_Base_Files">
+      <Properties>
+        <LoadOrder>10</LoadOrder>
+      </Properties>
+      <File>UI/Base/LaunchBar.lua</File>
+      <File>UI/Base/LaunchBar.xml</File>
+    </ImportFiles>
+    <ImportFiles id="Cui_Expansion1_Files" criteria="Expansion1AndBeyond">
+      <Properties>
+        <LoadOrder>11</LoadOrder>
+      </Properties>
+      <File>UI/Expansion1/LaunchBar_Expansion1.lua</File>
+    </ImportFiles>
+    <ImportFiles id="Cui_Expansion2_Files" criteria="Expansion2AndBeyond">
+      <Properties>
+        <LoadOrder>12</LoadOrder>
+      </Properties>
+      <File>UI/Expansion2/LaunchBar_Expansion2.lua</File>
+    </ImportFiles>
+  </InGameActions>
+
+  <Files>
+    <!-- UI - Base -->
+    <File>UI/Base/LaunchBar.lua</File>
+    <File>UI/Base/LaunchBar.xml</File>
+    <!-- UI - Expansion1 -->
+    <File>UI/Expansion1/LaunchBar_Expansion1.lua</File>
+    <!-- UI - Expansion2 -->
+    <File>UI/Expansion2/LaunchBar_Expansion2.lua</File>
+  </Files>
+</Mod>

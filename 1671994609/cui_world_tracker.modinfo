@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Mod id="21ba267d-1338-4a74-9d21-f6e52813b745" version="1">
+  <Properties>
+    <Name>[COLOR_Civ6LightBlue]Concise UI[ENDCOLOR] - [COLOR_Civ6Yellow]World Tracker[ENDCOLOR]</Name>
+    <Teaser>[Concise UI Add-On]</Teaser>
+    <Description>[ICON_Bullet]Added a reminder for the player when a technology or a civic could be completed by getting their boosts.[NEWLINE][ICON_Bullet]Gossip and Combat messages moved to World Tracker.[NEWLINE][ICON_Bullet]Added tooltip for technologies and civics in World Tracker.[NEWLINE][ICON_Bullet]Added tooltips and turns left when World Tracker is minimized.[NEWLINE][ICON_Bullet]Future Tech and Future Civic auto repeat without popup.</Description>
+    <Authors>eudaimonia</Authors>
+    <AffectsSavedGames>0</AffectsSavedGames>
+    <CompatibleVersions>2.0</CompatibleVersions>
+  </Properties>
+  
+  <Dependencies>
+    <Mod id="5f504949-398a-4038-a838-43c3acc4dc10" title="[COLOR_Civ6LightBlue]Concise UI[ENDCOLOR] - [COLOR_Civ6Red][ Core ][ENDCOLOR]" />
+  </Dependencies>
+
+  <ActionCriteria>
+    <Criteria id="Expansion1AndBeyond" any="1">
+      <RuleSetInUse>RULESET_EXPANSION_1,RULESET_EXPANSION_2</RuleSetInUse>
+    </Criteria>
+    <Criteria id="Expansion2AndBeyond" any="1">
+      <RuleSetInUse>RULESET_EXPANSION_2</RuleSetInUse>
+    </Criteria>
+  </ActionCriteria>
+
+  <InGameActions>
+    <ImportFiles id="Cui_Support">
+      <Properties>
+        <LoadOrder>9</LoadOrder>
+      </Properties>
+      <File>Support/CuiTechCivicSupport.lua</File>
+    </ImportFiles>
+    <ImportFiles id="Cui_Base_Files">
+      <Properties>
+        <LoadOrder>10</LoadOrder>
+      </Properties>
+      <File>UI/Base/CivicsChooser.lua</File>
+      <File>UI/Base/ResearchChooser.lua</File>
+      <File>UI/Base/StatusMessagePanel.lua</File>
+      <File>UI/Base/TechAndCivicSupport.lua</File>
+      <File>UI/Base/TechCivicCompletedPopup.lua</File>
+      <File>UI/Base/WorldTracker.lua</File>
+      <File>UI/Base/WorldTracker.xml</File>
+    </ImportFiles>
+    <ImportFiles id="Cui_Expansion1_Files" criteria="Expansion1AndBeyond">
+      <Properties>
+        <LoadOrder>11</LoadOrder>
+      </Properties>
+      <File>UI/Expansion1/WorldTracker_Expansion1.lua</File>
+    </ImportFiles>
+    <ImportFiles id="Cui_Expansion2_Files" criteria="Expansion2AndBeyond">
+      <Properties>
+        <LoadOrder>12</LoadOrder>
+      </Properties>
+      <File>UI/Expansion2/WorldTracker.xml</File>
+      <File>UI/Expansion2/WorldTracker_Expansion1.lua</File>
+    </ImportFiles>
+  </InGameActions>
+
+  <Files>
+    <!-- Support -->
+    <File>Support/CuiTechCivicSupport.lua</File>
+    <!-- UI - Base -->
+    <File>UI/Base/CivicsChooser.lua</File>
+    <File>UI/Base/ResearchChooser.lua</File>
+    <File>UI/Base/StatusMessagePanel.lua</File>
+    <File>UI/Base/TechAndCivicSupport.lua</File>
+    <File>UI/Base/TechCivicCompletedPopup.lua</File>
+    <File>UI/Base/WorldTracker.lua</File>
+    <File>UI/Base/WorldTracker.xml</File>
+    <!-- UI - Expansion1 -->
+    <File>UI/Expansion1/WorldTracker_Expansion1.lua</File>
+    <!-- UI - Expansion2 -->
+    <File>UI/Expansion2/WorldTracker.xml</File>
+    <File>UI/Expansion2/WorldTracker_Expansion1.lua</File>
+  </Files>
+</Mod>

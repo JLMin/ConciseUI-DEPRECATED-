@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Mod id="42baefa0-ebdf-4f02-b7eb-eedc7122947f" version="1">
+  <Properties>
+    <Name>[COLOR_Civ6LightBlue]Concise UI[ENDCOLOR] - [COLOR_Civ6Yellow]Leader Icon[ENDCOLOR]</Name>
+    <Teaser>[Concise UI Add-On]</Teaser>
+    <Description>[ICON_Bullet]Now provides advanced tooltip. This includes the Diplomatic Banner, Deal screen, and World Council screen.</Description>
+    <Authors>eudaimonia</Authors>
+    <AffectsSavedGames>0</AffectsSavedGames>
+    <CompatibleVersions>2.0</CompatibleVersions>
+  </Properties>
+  
+  <Dependencies>
+    <Mod id="5f504949-398a-4038-a838-43c3acc4dc10" title="[COLOR_Civ6LightBlue]Concise UI[ENDCOLOR] - [COLOR_Civ6Red][ Core ][ENDCOLOR]" />
+  </Dependencies>
+
+  <ActionCriteria>
+    <Criteria id="Expansion1AndBeyond" any="1">
+      <RuleSetInUse>RULESET_EXPANSION_1,RULESET_EXPANSION_2</RuleSetInUse>
+    </Criteria>
+    <Criteria id="Expansion2AndBeyond" any="1">
+      <RuleSetInUse>RULESET_EXPANSION_2</RuleSetInUse>
+    </Criteria>
+  </ActionCriteria>
+
+  <InGameActions>
+    <AddUserInterfaces id="Cui_InGameUI">
+      <Properties>
+        <Context>InGame</Context>
+      </Properties>
+      <File>UI/Additions/CUI_LeaderIconTT.xml</File>
+    </AddUserInterfaces>
+    <ImportFiles id="Cui_Support">
+      <Properties>
+        <LoadOrder>9</LoadOrder>
+      </Properties>
+      <File>Support/CuiLeaderIconSupport.lua</File>
+    </ImportFiles>
+    <ImportFiles id="Cui_Base_Files">
+      <Properties>
+        <LoadOrder>10</LoadOrder>
+      </Properties>
+      <File>UI/Base/DiplomacyActionView.lua</File>
+      <File>UI/Base/DiplomacyRibbon.lua</File>
+      <File>UI/Base/LeaderIcon.xml</File>
+    </ImportFiles>
+    <ImportFiles id="Cui_Expansion1_Files" criteria="Expansion1AndBeyond">
+      <Properties>
+        <LoadOrder>11</LoadOrder>
+      </Properties>
+      <File>UI/Expansion1/DiplomacyRibbon_Expansion1.lua</File>
+    </ImportFiles>
+    <ImportFiles id="Cui_Expansion2_Files" criteria="Expansion2AndBeyond">
+      <Properties>
+        <LoadOrder>12</LoadOrder>
+      </Properties>
+      <File>UI/Expansion2/DiplomacyActionView.xml</File>
+      <File>UI/Expansion2/WorldCongressPopup.lua</File>
+    </ImportFiles>
+    <ImportFiles id="Cui_Additions_Files">
+      <Properties>
+        <LoadOrder>20</LoadOrder>
+      </Properties>
+      <File>UI/Additions/CUI_LeaderIconTT.lua</File>
+      <File>UI/Additions/CUI_LeaderIconTT.xml</File>
+    </ImportFiles>
+  </InGameActions>
+
+  <Files>
+    <!-- Support -->
+    <File>Support/CuiLeaderIconSupport.lua</File>
+    <!-- UI - Base -->
+    <File>UI/Base/DiplomacyActionView.lua</File>
+    <File>UI/Base/DiplomacyRibbon.lua</File>
+    <File>UI/Base/LeaderIcon.xml</File>
+    <!-- UI - Expansion1 -->
+    <File>UI/Expansion1/DiplomacyRibbon_Expansion1.lua</File>
+    <!-- UI - Expansion2 -->
+    <File>UI/Expansion2/DiplomacyActionView.xml</File>
+    <File>UI/Expansion2/WorldCongressPopup.lua</File>
+    <!-- UI - Additions -->
+    <File>UI/Additions/CUI_LeaderIconTT.lua</File>
+    <File>UI/Additions/CUI_LeaderIconTT.xml</File>
+  </Files>
+</Mod>

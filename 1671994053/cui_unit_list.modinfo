@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Mod id="2b591ed0-8b3e-4a0d-a13d-433c40f656f1" version="1">
+  <Properties>
+    <Name>[COLOR_Civ6LightBlue]Concise UI[ENDCOLOR] - [COLOR_Civ6Yellow]Unit List[ENDCOLOR]</Name>
+    <Teaser>[Concise UI Add-On]</Teaser>
+    <Description>[ICON_Bullet]Added a button which leads to a new dedicated screen for all your units.[NEWLINE][ICON_Bullet]Added a hotkey to toggle the unit list (with key-binding in Menu screen).
+</Description>
+    <Authors>eudaimonia</Authors>
+    <AffectsSavedGames>0</AffectsSavedGames>
+    <CompatibleVersions>2.0</CompatibleVersions>
+  </Properties>
+  
+  <Dependencies>
+    <Mod id="5f504949-398a-4038-a838-43c3acc4dc10" title="[COLOR_Civ6LightBlue]Concise UI[ENDCOLOR] - [COLOR_Civ6Red][ Core ][ENDCOLOR]" />
+  </Dependencies>
+
+  <FrontEndActions>
+    <UpdateDatabase id="Cui_Config">
+      <File>Config/Cui_Config.xml</File>
+    </UpdateDatabase>
+  </FrontEndActions>
+
+  <InGameActions>
+    <AddUserInterfaces id="Cui_InGameUI">
+      <Properties>
+        <Context>InGame</Context>
+      </Properties>
+      <File>UI/Additions/Cui_UnitListButton.xml</File>
+      <File>UI/Additions/Cui_UnitListScreen.xml</File>
+    </AddUserInterfaces>
+    <ImportFiles id="Cui_Base_Files">
+      <Properties>
+        <LoadOrder>10</LoadOrder>
+      </Properties>
+      <File>UI/Base/UnitPanel.lua</File>
+    </ImportFiles>
+    <ImportFiles id="Cui_Additions_Files">
+      <Properties>
+        <LoadOrder>20</LoadOrder>
+      </Properties>
+      <File>UI/Additions/Cui_UnitListButton.lua</File>
+      <File>UI/Additions/Cui_UnitListButton.xml</File>
+      <File>UI/Additions/Cui_UnitListScreen.lua</File>
+      <File>UI/Additions/Cui_UnitListScreen.xml</File>
+    </ImportFiles>
+  </InGameActions>
+
+  <Files>
+    <!-- Config -->
+    <File>Config/Cui_Config.xml</File>
+    <!-- UI - Base -->
+    <File>UI/Base/UnitPanel.lua</File>
+    <!-- UI - Additions -->
+    <File>UI/Additions/Cui_UnitListButton.lua</File>
+    <File>UI/Additions/Cui_UnitListButton.xml</File>
+    <File>UI/Additions/Cui_UnitListScreen.lua</File>
+    <File>UI/Additions/Cui_UnitListScreen.xml</File>
+  </Files>
+</Mod>

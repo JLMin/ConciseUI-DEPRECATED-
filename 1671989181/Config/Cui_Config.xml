@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- CUI Map Pins Hotkeys -->
+<!-- eudaimonia, 2/3/2019 -->
+<GameInfo>
+  <InputCategories>
+    <InsertOrIgnore CategoryId="CONCISEUI" Name="LOC_CUI_CONFIG_CATEGORY" Visible="1" SortIndex="0" />
+  </InputCategories>
+  
+  <InputActions>	
+    <InsertOrIgnore ActionId="CuiActionPlaceMapPin"       Name="LOC_CUI_CONFIG_PLACE_MAP_PIN"       Description="LOC_CUI_CONFIG_PLACE_MAP_PIN"       CategoryId="CONCISEUI" ContextId="World" />
+  </InputActions>
+  
+  <InputActionDefaultGestures>
+    <InsertOrIgnore ActionId="CuiActionPlaceMapPin"       Index="0" GestureType="KBMouse" GestureData="LOC_OPTIONS_KEY_X"/>
+  </InputActionDefaultGestures>
+</GameInfo>

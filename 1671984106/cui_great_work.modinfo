@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Mod id="1686e344-4b87-4771-beb7-e23ae686e00a" version="1">
+  <Properties>
+    <Name>[COLOR_Civ6LightBlue]Concise UI[ENDCOLOR] - [COLOR_Civ6Yellow]Great Works Screen[ENDCOLOR]</Name>
+    <Teaser>[Concise UI Add-On]</Teaser>
+    <Description>[ICON_Bullet]Screen size increased.[NEWLINE][ICON_Bullet]Works sortable by city/building.[NEWLINE][ICON_Bullet]Added a visual theming helper: a toggle function now applies a color layer to items of the same type and assigns a unique number to each artist.</Description>
+    <Authors>eudaimonia</Authors>
+    <AffectsSavedGames>0</AffectsSavedGames>
+    <CompatibleVersions>2.0</CompatibleVersions>
+  </Properties>
+  
+  <Dependencies>
+    <Mod id="5f504949-398a-4038-a838-43c3acc4dc10" title="[COLOR_Civ6LightBlue]Concise UI[ENDCOLOR] - [COLOR_Civ6Red][ Core ][ENDCOLOR]" />
+  </Dependencies>
+
+  <ActionCriteria>
+    <Criteria id="Expansion2AndBeyond" any="1">
+      <RuleSetInUse>RULESET_EXPANSION_2</RuleSetInUse>
+    </Criteria>
+  </ActionCriteria>
+
+  <InGameActions>
+    <ImportFiles id="Cui_Base_Files">
+      <Properties>
+        <LoadOrder>10</LoadOrder>
+      </Properties>
+      <File>UI/Base/GreatWorksOverview.lua</File>
+      <File>UI/Base/GreatWorksOverview.xml</File>
+    </ImportFiles>
+    <ImportFiles id="Cui_Expansion2_Files" criteria="Expansion2AndBeyond">
+      <Properties>
+        <LoadOrder>12</LoadOrder>
+      </Properties>
+      <File>UI/Expansion2/GreatWorksOverview_Expansion2.lua</File>
+    </ImportFiles>
+  </InGameActions>
+
+  <Files>
+    <!-- UI - Base -->
+    <File>UI/Base/GreatWorksOverview.lua</File>
+    <File>UI/Base/GreatWorksOverview.xml</File>
+    <!-- UI - Expansion2 -->
+    <File>UI/Expansion2/GreatWorksOverview_Expansion2.lua</File>
+  </Files>
+</Mod>

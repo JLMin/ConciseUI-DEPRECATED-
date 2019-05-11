@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Mod id="60a49f51-140f-4136-8b94-f5837ec8ed91" version="1">
+  <Properties>
+    <Name>[COLOR_Civ6LightBlue]Concise UI[ENDCOLOR] - [COLOR_Civ6Yellow]Great People Screen[ENDCOLOR]</Name>
+    <Teaser>[Concise UI Add-On]</Teaser>
+    <Description>[ICON_Bullet]UI reworked (based on Sukritact's Better Great Person Screen, changed lots of details).[NEWLINE][ICON_Bullet]Great People recruitment history is now in reverse order.</Description>
+    <Authors>eudaimonia</Authors>
+    <AffectsSavedGames>0</AffectsSavedGames>
+    <CompatibleVersions>2.0</CompatibleVersions>
+  </Properties>
+  
+  <Dependencies>
+    <Mod id="5f504949-398a-4038-a838-43c3acc4dc10" title="[COLOR_Civ6LightBlue]Concise UI[ENDCOLOR] - [COLOR_Civ6Red][ Core ][ENDCOLOR]" />
+  </Dependencies>
+
+  <InGameActions>
+    <AddUserInterfaces id="Cui_InGameUI">
+      <Properties>
+        <Context>InGame</Context>
+      </Properties>
+      <File>UI/Additions/CUI_GreatPersonTT.xml</File>
+    </AddUserInterfaces>
+    <ImportFiles id="Cui_Base_Files">
+      <Properties>
+        <LoadOrder>10</LoadOrder>
+      </Properties>
+      <File>UI/Base/GreatPeoplePopup.lua</File>
+      <File>UI/Base/GreatPeoplePopup.xml</File>
+    </ImportFiles>
+    <ImportFiles id="Cui_Additions_Files">
+      <Properties>
+        <LoadOrder>20</LoadOrder>
+      </Properties>
+      <File>UI/Additions/CUI_GreatPersonTT.lua</File>
+      <File>UI/Additions/CUI_GreatPersonTT.xml</File>
+    </ImportFiles>
+  </InGameActions>
+
+  <Files>
+    <!-- UI - Base -->
+    <File>UI/Base/GreatPeoplePopup.lua</File>
+    <File>UI/Base/GreatPeoplePopup.xml</File>
+    <!-- UI - Additions -->
+    <File>UI/Additions/CUI_GreatPersonTT.lua</File>
+    <File>UI/Additions/CUI_GreatPersonTT.xml</File>
+  </Files>
+</Mod>
