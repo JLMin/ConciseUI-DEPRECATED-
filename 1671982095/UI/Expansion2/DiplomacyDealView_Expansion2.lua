@@ -15,6 +15,7 @@ local ms_DefaultOneTimeFavorAmount = 1;
 
 -- CUI
 local CuiDefaultColor = UI.GetColorValueFromHexLiteral(0xFFFFFFFF);
+local cuiSPC = 5; -- Strategic Per Click
 
 -- ===========================================================================
 -- CACHE BASE FUNCTIONS
@@ -54,24 +55,27 @@ function OnClickAvailableResource(player, resourceType)
           end
           if (pResourceDef ~= nil and pResourceDef.Accumulate) then
             -- already have this, up the amount
-            local iAddAmount = pDealItem:GetAmount() + 1;
-            iAddAmount = clip(iAddAmount, nil, pDealItem:GetMaxAmount());
-            if (iAddAmount ~= pDealItem:GetAmount()) then
-              pDealItem:SetAmount(iAddAmount);
+
+            -- CUI: rewrite strategic logic
+            local oldValue = pDealItem:GetAmount();
+            local newValue = clip(oldValue + cuiSPC, nil, pDealItem:GetMaxAmount());
+
+            if (newValue ~= pDealItem:GetAmount()) then
+              pDealItem:SetAmount(newValue);
 
               if not pDealItem:IsValid() then
-                pDealItem:SetAmount(iAddAmount-1);
-                return;
+                pDealItem:SetAmount(oldValue); return;
               else
                 UI.PlaySound("UI_GreatWorks_Put_Down");
                 UpdateDealPanel(player);
-
                 UpdateProposedWorkingDeal();
                 return;
               end
             else
               return;
             end
+            --
+
           end
         end
       end
@@ -81,14 +85,18 @@ function OnClickAvailableResource(player, resourceType)
     local pPlayerResources = player:GetResources();
     pDealItem = pDeal:AddItemOfType(DealItemTypes.RESOURCES, player:GetID());
     if (pDealItem ~= nil) then
-      -- Add one
       pDealItem:SetValueType(resourceType);
-      pDealItem:SetAmount(1);
+
+      -- CUI: rewrite strategic logic
       if (pResourceDef ~= nil and pResourceDef.Accumulate) then
+        local iAddAmount = math.min(cuiSPC, pDealItem:GetMaxAmount());
+        pDealItem:SetAmount(iAddAmount);
         pDealItem:SetDuration(0);
       else
-        pDealItem:SetDuration(30);	-- Default to this many turns		
+        pDealItem:SetAmount(1);
+        pDealItem:SetDuration(30);	-- Default to this many turns
       end
+      --
 
       -- After we add the item, test to see if the item is valid, it is possible that we have exceeded the amount of resources we can trade.
       if not pDealItem:IsValid() then
@@ -180,7 +188,7 @@ function PopulateDealResources(player: table, iconList: table)
       end -- end if deal
     end
   end
-  
+
 end
 
 -- ===========================================================================
@@ -192,11 +200,11 @@ end
 
 -- ===========================================================================
 function PopulatePlayerAvailablePanel(rootControl: table, player: table)
-  
+
   local playerType = GetPlayerType(player);
   local iAvailableItemCount = PopulateAvailableFavor(player, g_AvailableGroups[AvailableDealItemGroupTypes.FAVOR][playerType]);
   iAvailableItemCount = iAvailableItemCount + BASE_PopulatePlayerAvailablePanel(rootControl, player);
-  return iAvailableItemCount; 
+  return iAvailableItemCount;
 end
 
 function PopulateAvailableFavor(player: table, iconList: table)
@@ -214,7 +222,7 @@ function PopulateAvailableFavor(player: table, iconList: table)
       local favorBalance:number	= player:GetFavor();
 
       if (not ms_bIsDemand) then
-      
+
         -- CUI: use custom edit group
         local editGroup = CuiGetEditGroup(iconList);
         SetIconToSize(editGroup.Icon, "ICON_YIELD_FAVOR");
@@ -244,7 +252,7 @@ function OnClickAvailableOneTimeFavor(player, iAddAmount: number)
   if (pDeal ~= nil) then
 
     local bFound = false;
-    
+
     -- Already there?
     local dealItems = pDeal:FindItemsByType(DealItemTypes.FAVOR, DealItemSubTypes.NONE, player:GetID());
     local pDealItem;

@@ -3,12 +3,12 @@
   <Properties>
     <Name>[COLOR_Civ6LightBlue]Concise UI[ENDCOLOR] - [COLOR_Civ6Yellow]Deal Panel[ENDCOLOR]</Name>
     <Teaser>[Concise UI Add-On]</Teaser>
-    <Description>[ICON_Bullet]Panel size increased.[NEWLINE][ICON_Bullet]Added sets of buttons to make gold / favor adjustment easier.[NEWLINE][ICON_Bullet]Added resource checks to avoid inappropriate deals.[NEWLINE][ICON_Bullet]Turn-based deal no longer display text, to save some space.[NEWLINE][ICON_Bullet]Change Refuse Deal button to a red one.</Description>
+    <Description>[ICON_Bullet]Panel size increased.[NEWLINE][ICON_Bullet]Added sets of buttons to make gold / favor adjustment easier.[NEWLINE][ICON_Bullet]Added resource checks to avoid inappropriate deals.[NEWLINE][ICON_Bullet]Turn-based deal no longer display text, to save some space.[NEWLINE][ICON_Bullet]Change Refuse Deal button to a red one.[NEWLINE][ICON_Bullet]Strategic resources +5 per click (GS).</Description>
     <Authors>eudaimonia</Authors>
     <AffectsSavedGames>0</AffectsSavedGames>
     <CompatibleVersions>2.0</CompatibleVersions>
   </Properties>
-  
+
   <Dependencies>
     <Mod id="5f504949-398a-4038-a838-43c3acc4dc10" title="[COLOR_Civ6LightBlue]Concise UI[ENDCOLOR] - [COLOR_Civ6Red][ Core ][ENDCOLOR]" />
   </Dependencies>
@@ -18,7 +18,7 @@
       <RuleSetInUse>RULESET_EXPANSION_2</RuleSetInUse>
     </Criteria>
   </ActionCriteria>
-  
+
   <InGameActions>
     <ImportFiles id="Cui_Base_Files">
       <Properties>
