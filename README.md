@@ -1,10 +1,12 @@
 # Concise UI
 Concise UI is a set of modular UI mods for game **Sid Meier's Civilization VI**.  
 It greatly improves the game experience by modifying the vanilla UI and adding new UI elements to the game.
+> _Supported game versions: 1.0.0.317 (416354)_  
+> Some modules may not support the latest version of the game
 
 ## Steam Workshop
 [Concise Mod Manager](https://steamcommunity.com/sharedfiles/filedetails/?id=1712085767)  
-[Concise UI](https://steamcommunity.com/sharedfiles/filedetails/?id=1671978687)  
+[Concise UI - [ Core ]](https://steamcommunity.com/sharedfiles/filedetails/?id=1671978687)  
 [Concise UI - Collection](https://steamcommunity.com/workshop/filedetails/?id=1652137489)  
 
 ## Mods List
