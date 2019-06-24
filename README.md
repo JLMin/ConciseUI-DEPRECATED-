@@ -1,4 +1,4 @@
-# Concise UI
+# Concise UI (v1 DEPRECATED)
 Concise UI is a set of modular UI mods for game **Sid Meier's Civilization VI**.  
 It greatly improves the game experience by modifying the vanilla UI and adding new UI elements to the game.
 > _Supported game versions: 1.0.0.317 (416354)_  
